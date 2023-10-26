@@ -37,7 +37,7 @@ img {
 
 .container {
   max-width: 320px;
-  margin: 0 auto;
+  margin: auto auto;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -293,7 +293,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/header-bg.jpg);
+    url(../images/header-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -302,6 +302,18 @@ img {
   max-width: 1440px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0 auto;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/header-bg-mob-2x.jpg);
+  }
 }
 
 .main-title {
@@ -759,9 +771,6 @@ img {
   background-color: rgba(46, 47, 66, 0.4);
   top: 0;
   left: 0;
-  /*display: flex;
-  align-items: center;
-  justify-content: center;*/
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -770,8 +779,8 @@ img {
 }
 
 .modal {
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
@@ -980,11 +989,6 @@ img {
 /*-------------МЕДІА ЗАПИТ--------------*/
 
 @media screen and (min-width: 320px) {
-  /* .container {
-    max-width: 320px;
-    padding-left: 16px;
-    padding-right: 16px;
-  } */
 }
 
 @media screen and (min-width: 768px) {
@@ -1050,8 +1054,25 @@ img {
   }
 
   .main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/header-bg-tab.jpg);
     padding-top: 112px;
     padding-bottom: 112px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/header-bg-tab-2x.jpg);
+    }
   }
 
   .main-title {
@@ -1106,12 +1127,19 @@ img {
   }
 
   .footer {
+    /* display: block; */
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-container {
+    display: flex;
+    width: 768px;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 80px;
+    padding-left: 108px;
     gap: 72px 24px;
   }
 
@@ -1146,6 +1174,11 @@ img {
 
   .footer-input {
     width: 264px;
+  }
+
+  .modal {
+    width: 408px;
+    transform: translate(-50%, -43%);
   }
 }
 
@@ -1185,8 +1218,25 @@ img {
   }
 
   .main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/header-bg.jpg);
     padding-top: 188px;
     padding-bottom: 188px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/header-bg-2x.jpg);
+    }
   }
 
   .main-title {
@@ -1285,21 +1335,30 @@ img {
 
   .footer {
     padding: 100px 0;
+    display: block;
   }
 
   .footer-container {
-    /* width: 1158px;
-    margin: 0 auto;
-    /* padding: 0 15px; */
     display: flex;
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
     align-items: baseline;
     flex-wrap: nowrap;
     row-gap: 0;
     column-gap: 0;
-    width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
   }
+  /* width: 1158px;
+    margin: 0 auto;
+    /* padding: 0 15px; */
+  /* display: flex;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    column-gap: 0;
+    /* width: 1158px; */
+  /* margin: 0 auto; */
+  /* padding: 0 110px;
+  } */
 
   .logo-footer {
     /* margin-right: 120px;
@@ -1335,5 +1394,9 @@ img {
   .footer-input {
     width: 264px;
     line-height: 1.5;
+  }
+
+  .modal {
+    transform: translate(-50%, -46%);
   }
 }
